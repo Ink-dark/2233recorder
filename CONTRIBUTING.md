@@ -257,7 +257,18 @@ pytest --cov=src
 - GitHub Issues：https://github.com/Ink-dark/2233recorder/issues
 - 电子邮件：moranqidarkseven@hallochat.cn
 
-## 📄 许可证
+## � 录播姬使用说明
+
+2233recorder 使用 [BililiveRecorder](https://github.com/BililiveRecorder/BililiveRecorder) 作为录制核心，具体使用方式如下：
+
+1. **自动下载机制**：系统会从 GitHub 自动下载最新版本的 BililiveRecorder-CLI 可执行文件
+2. **独立进程运行**：BililiveRecorder 作为外部独立进程运行，通过命令行调用
+3. **无代码集成**：2233recorder 不直接包含或修改 BililiveRecorder 的源代码
+4. **配置分离**：每个直播间拥有独立的配置文件，与主程序代码完全分离
+
+这种设计确保了 2233recorder 与 BililiveRecorder 之间的清晰边界，避免了许可证使用纠纷。所有贡献者在开发相关功能时，必须严格遵守这一使用方式，不得直接包含或修改 BililiveRecorder 的源代码。
+
+## �📄 许可证
 
 通过贡献代码，您同意您的贡献将按照项目的MIT许可证发布。
 
