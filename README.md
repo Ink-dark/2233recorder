@@ -28,14 +28,41 @@
 
 ## 🚀 安装步骤
 
-### 1. 克隆仓库
+### 1. 安装依赖
+
+#### 安装FFmpeg
+
+Ubuntu/Debian系统：
+```bash
+sudo apt update
+sudo apt install -y ffmpeg
+```
+
+CentOS/RHEL系统：
+```bash
+sudo yum install -y epel-release
+sudo yum install -y ffmpeg ffmpeg-devel
+```
+
+Arch Linux系统：
+```bash
+sudo pacman -Syu ffmpeg
+```
+
+#### 安装Git
+
+```bash
+sudo apt install -y git
+```
+
+### 2. 克隆仓库
 
 ```bash
 git clone https://github.com/Ink-dark/2233recorder.git /opt/2233recorder
 cd /opt/2233recorder
 ```
 
-### 2. 创建虚拟环境并安装依赖
+### 3. 创建虚拟环境并安装依赖
 
 ```bash
 python -m venv venv
@@ -43,14 +70,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. 初始化配置文件
+### 4. 初始化配置文件
 
 ```bash
 cp config/config.example.yaml config/config.yaml
 cp config/rooms.example.yaml config/rooms.yaml
 ```
 
-### 4. 编辑配置文件
+### 5. 编辑配置文件
 
 根据需要编辑配置文件：
 
@@ -62,7 +89,7 @@ vim config/config.yaml
 vim config/rooms.yaml
 ```
 
-### 5. 启动服务
+### 6. 启动服务
 
 ```bash
 # 直接运行
@@ -146,7 +173,7 @@ curl http://your_server_ip:8080/api/status
 ## 📞 联系方式
 
 - GitHub Issues: https://github.com/Ink-dark/2233recorder/issues
-- 电子邮件: ink-dark@example.com
+- 电子邮件: moranqidarkseven@hallochat.cn
 
 ## 📊 开发进度
 
