@@ -255,7 +255,7 @@ pytest --cov=src
 ## 📞 联系方式
 
 - GitHub Issues：https://github.com/Ink-dark/2233recorder/issues
-- 电子邮件：ink-dark@example.com
+- 电子邮件：moranqidarkseven@hallochat.cn
 
 ## 📄 许可证
 
