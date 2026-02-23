@@ -1,0 +1,31 @@
+# 直播间配置列表
+
+rooms:
+  - id: "1"
+    platform: "bilibili"
+    room_id: "123456"  # B站房间号
+    name: "主播名称"
+    auto_record: true
+    output_dir: "/opt/2233recorder/recordings/bilibili/123456"
+    watermark:  # 房间级水印配置，覆盖全局配置
+      enabled: true
+      text: "主播名称 - 2233recorder录制"
+    processor:  # 房间级处理配置
+      enabled: true
+      format: "mp4"
+      compress: true
+      quality: "high"
+
+  - id: "2"
+    platform: "douyu"
+    room_id: "789012"  # 斗鱼房间号
+    name: "另一位主播"
+    auto_record: true
+    output_dir: "/opt/2233recorder/recordings/douyu/789012"
+    watermark:
+      enabled: false
+    processor:
+      enabled: true
+      format: "mp4"
+      compress: false
+      quality: "medium"

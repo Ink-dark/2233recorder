@@ -1,0 +1,55 @@
+# 2233recorder 主配置文件
+
+# 系统配置
+system:
+  name: "2233recorder"
+  version: "0.1.0"
+  log_level: "info"  # debug, info, warning, error
+  temp_dir: "/tmp/2233recorder"
+  data_dir: "/opt/2233recorder/data"
+  log_dir: "/opt/2233recorder/logs"
+
+# 监控配置
+monitor:
+  enabled: true
+  interval: 300  # 监控间隔（秒）
+  platforms:  # 支持的平台列表
+    - "bilibili"
+    - "douyu"
+    - "huya"
+
+# 录制配置
+recorder:
+  enabled: true
+  auto_update: true  # 自动更新录播姬
+  default_output_format: "mp4"
+  recorders:
+    bilibili:
+      type: "bililive_recorder"
+      download_url: "https://github.com/BililiveRecorder/BililiveRecorder/releases/latest"
+      work_dir: "/opt/2233recorder/recorders/bilibili"
+
+# 处理配置
+processor:
+  enabled: true
+  ffmpeg_path: "/usr/bin/ffmpeg"
+  watermark:
+    enabled: true
+    text: "2233recorder录制"
+    font: "wqy-microhei"
+    font_size: 24
+    color: "white"
+    position: "bottom-right"
+    margin: 10
+
+# Web管理配置
+web:
+  enabled: true
+  host: "0.0.0.0"
+  port: 8080
+  username: "admin"
+  password: "admin123"  # 建议首次登录后修改
+  ssl:
+    enabled: false
+    cert_file: ""
+    key_file: ""
